@@ -7,7 +7,10 @@ const AuthRouter = require('./Routes/AuthRouter');
 const AdminRouter = require('./Routes/AdminRouter');
 const TeacherRouter = require('./Routes/TeacherRouter');
 const ParentRouter = require('./Routes/ParentRouter');
+<<<<<<< HEAD
 const SubAdminRouter = require('./Routes/SubAdminRouter');
+=======
+>>>>>>> 7332e0609b8d452cc3959cb04bc1d2e99a9b2ee6
 
 
 
@@ -29,7 +32,10 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7332e0609b8d452cc3959cb04bc1d2e99a9b2ee6
 app.use('/uploads', express.static('uploads'));
 
 // Routes
@@ -37,7 +43,10 @@ app.use('/auth', AuthRouter);
 app.use('/admin', AdminRouter); 
 app.use('/teacher', TeacherRouter);
 app.use('/parent', ParentRouter);
+<<<<<<< HEAD
 app.use('/sub-admin', SubAdminRouter);
+=======
+>>>>>>> 7332e0609b8d452cc3959cb04bc1d2e99a9b2ee6
 
 // Error handler
 app.use((err, req, res, next) => {
