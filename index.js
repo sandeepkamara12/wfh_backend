@@ -22,11 +22,12 @@ app.get('/ping', (req, res) => {
 app.use(express.json());
 
 const corsOptions = {
-  origin: '*',
+  origin: ['https://wfh-phi.vercel.app', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use('/uploads', express.static('uploads'));
 
 // Routes
