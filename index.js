@@ -22,7 +22,7 @@ app.get('/ping', (req, res) => {
 app.use(express.json());
 
 const corsOptions = {
-  origin: 'https://wfh-phi.vercel.app',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
