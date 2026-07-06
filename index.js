@@ -22,7 +22,7 @@ app.get('/ping', (req, res) => {
 app.use(express.json());
 
 const corsOptions = {
-  origin: ['https://wfh-phi.vercel.app', 'http://localhost:5173'],
+  origin: ['https://wfh-eosin-mu.vercel.app', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
