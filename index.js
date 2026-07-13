@@ -7,6 +7,7 @@ const AuthRouter = require('./Routes/AuthRouter');
 const AdminRouter = require('./Routes/AdminRouter');
 const TeacherRouter = require('./Routes/TeacherRouter');
 const ParentRouter = require('./Routes/ParentRouter');
+const SubAdminRouter = require('./Routes/SubAdminRouter');
 
 
 
@@ -35,6 +36,7 @@ app.use('/auth', AuthRouter);
 app.use('/admin', AdminRouter); 
 app.use('/teacher', TeacherRouter);
 app.use('/parent', ParentRouter);
+app.use('/sub-admin', SubAdminRouter);
 
 // Error handler
 app.use((err, req, res, next) => {
