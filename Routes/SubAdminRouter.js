@@ -2,6 +2,7 @@ const { ensureAuthenticated, isSubadmin } = require('../Middlewares/Auth');
 const { userData, getUserById, updateUserById, deleteUserById, activeDeactiveUser, adminprofile, updateAdminUser } = require('../Controllers/SubAdmin/UserController'); 
 const { createClassroom, getClassrooms, getClassroomById, updateClassroom, deleteClassroom, } = require("../Controllers/SubAdmin/ClassroomController");
 const { createSection, getSections, getSectionById, updateSection, deleteSection, } = require("../Controllers/SubAdmin/SectionController");
+const { createStream, getStreams, getStreamById, updateStream, deleteStream, } = require("../Controllers/SubAdmin/StreamController");
 
 
 
@@ -20,6 +21,12 @@ router.get("/classroom/", ensureAuthenticated, isSubadmin, getClassrooms);
 router.get("/classroom/:id", ensureAuthenticated, isSubadmin, getClassroomById);
 router.put("/classroom/:id", ensureAuthenticated, isSubadmin, updateClassroom);
 router.delete("/classroom/:id", ensureAuthenticated, isSubadmin, deleteClassroom);
+// stream
+router.post("/stream/create",ensureAuthenticated, isSubadmin, createStream);
+router.get("/stream/", ensureAuthenticated, isSubadmin, getStreams);
+router.get("/stream/:id", ensureAuthenticated, isSubadmin, getStreamById);
+router.put("/stream/:id", ensureAuthenticated, isSubadmin, updateStream);
+router.delete("/stream/:id", ensureAuthenticated, isSubadmin, deleteStream);
 // secton
 router.post("/section/create",ensureAuthenticated, isSubadmin, createSection);
 router.get("/section/", ensureAuthenticated, isSubadmin, getSections);
