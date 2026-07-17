@@ -118,6 +118,10 @@ const updateTeacher = async (req, res) => {
             updated.password = await bcrypt.hash(updated.password, 10);
         }
 
+        if (req.file) {
+            updated.profile_pic = `uploads/profile_pics/${req.file.filename}`;
+        }
+
         // Update teacher
         await teacher.update(updated);
 
