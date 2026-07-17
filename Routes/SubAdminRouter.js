@@ -3,6 +3,7 @@ const { userData, getUserById, updateUserById, deleteUserById, activeDeactiveUse
 const { createClassroom, getClassrooms, getClassroomById, updateClassroom, deleteClassroom, } = require("../Controllers/SubAdmin/ClassroomController");
 const { createSection, getSections, getSectionById, updateSection, deleteSection, } = require("../Controllers/SubAdmin/SectionController");
 const { createStream, getStreams, getStreamById, updateStream, deleteStream, } = require("../Controllers/SubAdmin/StreamController");
+const { getTeachers, updateTeacher } = require('../Controllers/SubAdmin/TeacherController');
 
 
 
@@ -39,8 +40,8 @@ router.get("/all-teachers",ensureAuthenticated, isSubadmin, getTeachers);
 router.put("/update-teacher/:id",ensureAuthenticated, isSubadmin, updateTeacher);
 
 // student
-router.get("/all-students",ensureAuthenticated, isSubadmin, getStudents);
-router.put("/update-student/:id",ensureAuthenticated, isSubadmin, updateStudent);
+// router.get("/all-students",ensureAuthenticated, isSubadmin, getStudents);
+// router.put("/update-student/:id",ensureAuthenticated, isSubadmin, updateStudent);
 
 
 module.exports = router; 
