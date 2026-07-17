@@ -34,6 +34,13 @@ router.get("/section/:id", ensureAuthenticated, isSubadmin, getSectionById);
 router.put("/section/:id", ensureAuthenticated, isSubadmin, updateSection);
 router.delete("/section/:id", ensureAuthenticated, isSubadmin, deleteSection);
 
+// teacher
+router.get("/all-teachers",ensureAuthenticated, isSubadmin, getTeachers);
+router.put("/update-teacher/:id",ensureAuthenticated, isSubadmin, updateTeacher);
+
+// student
+router.get("/all-students",ensureAuthenticated, isSubadmin, getStudents);
+router.put("/update-student/:id",ensureAuthenticated, isSubadmin, updateStudent);
 
 
 module.exports = router; 
